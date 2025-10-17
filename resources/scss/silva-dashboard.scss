@@ -1,0 +1,319 @@
+/**
+ * GIR-365 Silva Dashboard Integration SCSS
+ * Importa y personaliza todos los componentes Silva Dashboard
+ */
+
+// First, import our custom variables
+@import 'variables-4k';
+
+// Import Silva Dashboard Structure Components
+@import '../css/custom/structure/general';
+@import '../css/custom/structure/menu';
+@import '../css/custom/structure/topbar';
+@import '../css/custom/structure/page-head';
+@import '../css/custom/structure/footer';
+
+// Import Silva Dashboard UI Components
+@import '../css/custom/componentes/reboot';
+@import '../css/custom/componentes/type';
+@import '../css/custom/componentes/card';
+@import '../css/custom/componentes/forms';
+@import '../css/custom/componentes/tables';
+@import '../css/custom/componentes/nav';
+@import '../css/custom/componentes/dropdown';
+@import '../css/custom/componentes/modal';
+@import '../css/custom/componentes/alert';
+@import '../css/custom/componentes/badges';
+@import '../css/custom/componentes/breadcrumb';
+@import '../css/custom/componentes/pagination';
+@import '../css/custom/componentes/progress';
+@import '../css/custom/componentes/avatar';
+@import '../css/custom/componentes/tabs';
+@import '../css/custom/componentes/accordions';
+@import '../css/custom/componentes/popover';
+@import '../css/custom/componentes/widgets';
+
+// Import Silva Dashboard Extended Components (only available ones)
+@import '../css/custom/extended/scrollspy';
+
+// Import Silva Dashboard Plugin Integrations (skip missing files)
+
+// Import Silva Dashboard Pages (skip missing files)
+
+// GIR-365 Silva Dashboard Customizations
+.gir-silva-dashboard {
+  // Override Silva colors with GIR-365 branding
+  --bs-primary: #{$gir-gold-primary};
+  --bs-primary-rgb: 209, 168, 84;
+  --bs-secondary: #{$gir-gold-secondary};
+
+  // Silva Layout with GIR-365 colors
+  .app-sidebar-menu {
+    background: linear-gradient(180deg, #{$sidebar-bg} 0%, #{$sidebar-bg-dark} 100%);
+    border-right: 2px solid #{$gir-gold-primary};
+    box-shadow: $box-shadow;
+  }
+
+  .logo-box {
+    background: linear-gradient(135deg, rgba($gir-gold-primary, 0.1), rgba(0, 0, 0, 0.3));
+    border-bottom: 1px solid rgba($gir-gold-primary, 0.3);
+
+    .logo {
+      color: #{$gir-gold-primary};
+      text-shadow: 0 0 20px rgba($gir-gold-primary, 0.6);
+    }
+  }
+
+  // Silva Sidebar Navigation with GIR-365 styling
+  #sidebar-menu {
+    .menu-title {
+      color: #{$gir-gold-primary};
+
+      &::after {
+        background: linear-gradient(90deg, #{$gir-gold-primary}, transparent);
+      }
+    }
+
+    .menuitem-active {
+      > a,
+      .active {
+        color: #{$gir-gold-primary};
+      }
+
+      .tp-link.active {
+        background: linear-gradient(135deg, #{$gir-gold-primary}, #{$gir-gold-secondary});
+        color: #000000;
+      }
+    }
+
+    > ul > li > a {
+      &:hover,
+      &:focus,
+      &:active {
+        color: #{$gir-gold-primary};
+        background: linear-gradient(135deg, rgba($gir-gold-primary, 0.25), rgba($gir-gold-primary, 0.1));
+        border-left: 3px solid #{$gir-gold-primary};
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  // Silva Topbar with GIR-365 styling
+  .topbar-custom {
+    background: #{$topbar-bg-light};
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+    .topnav-menu .nav-link:hover {
+      color: #{$gir-gold-primary};
+    }
+  }
+
+  // Silva Content Area
+  .content-page {
+    background: #{$body-bg};
+    color: #{$body-color};
+  }
+
+  // Silva Cards with GIR-365 enhancement
+  .card {
+    border: 1px solid #{$card-border-color};
+    box-shadow: #{$box-shadow-sm};
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: #{$box-shadow};
+    }
+
+    .card-header {
+      background: rgba($gir-gold-primary, 0.05);
+      border-bottom: 1px solid #{$card-border-color};
+    }
+  }
+
+  // Silva Buttons with GIR-365 styling
+  .btn-primary {
+    background: linear-gradient(135deg, #{$gir-gold-primary}, #{$gir-gold-secondary});
+    border-color: #{$gir-gold-primary};
+    color: #000000;
+
+    &:hover {
+      background: linear-gradient(135deg, #{$gir-gold-secondary}, #{$gir-gold-dark});
+      border-color: #{$gir-gold-secondary};
+      transform: translateY(-1px);
+      box-shadow: 0 5px 15px rgba($gir-gold-primary, 0.3);
+    }
+  }
+
+  // Silva Forms with GIR-365 focus styles
+  .form-control:focus,
+  .form-select:focus {
+    border-color: #{$input-focus-border-color};
+    box-shadow: #{$input-focus-box-shadow};
+  }
+
+  // Silva Tables with GIR-365 accents
+  .table {
+    th {
+      color: #{$body-color};
+      background: #{$light};
+    }
+
+    .table-striped > tbody > tr:nth-of-type(odd) > td {
+      background: #{$table-striped-bg};
+    }
+  }
+
+  // Silva Stat Cards with GIR-365 gold theme
+  .stat-card {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #{$gir-gold-primary}, #{$gir-gold-light});
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 40px rgba($gir-gold-primary, 0.15);
+    }
+
+    .stat-number {
+      background: linear-gradient(135deg, #{$gir-gold-primary}, #{$gir-gold-secondary});
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  // Silva Responsive behavior
+  @media (max-width: #{map-get($grid-breakpoints, md) - 1}) {
+    .app-sidebar-menu {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+
+      &.show {
+        transform: translateX(0);
+      }
+    }
+
+    .content-page {
+      margin-left: 0;
+    }
+  }
+
+  // 4K Display optimizations
+  @media (min-width: #{$breakpoint-4k}) {
+    .app-sidebar-menu {
+      width: 320px;
+    }
+
+    .topbar-custom {
+      height: 80px;
+      left: 320px;
+    }
+
+    .content-page {
+      margin-left: 320px;
+      margin-top: 80px;
+    }
+
+    .logo-box {
+      width: 320px;
+      height: 80px;
+
+      .logo {
+        line-height: 80px;
+        font-size: 1.8rem;
+      }
+    }
+
+    #sidebar-menu > ul > li > a {
+      padding: 12px 24px;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// GIR-365 Animation Enhancements
+@keyframes gir-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes gir-slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gir-pulse {
+  animation: gir-pulse 2s infinite;
+}
+
+.gir-slide-up {
+  animation: gir-slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// GIR-365 Utility Classes
+.gir-text-gold {
+  color: #{$gir-gold-primary} !important;
+}
+.gir-bg-gold {
+  background-color: #{$gir-gold-primary} !important;
+}
+.gir-border-gold {
+  border-color: #{$gir-gold-primary} !important;
+}
+
+.gir-text-gold-secondary {
+  color: #{$gir-gold-secondary} !important;
+}
+.gir-bg-gold-secondary {
+  background-color: #{$gir-gold-secondary} !important;
+}
+.gir-border-gold-secondary {
+  border-color: #{$gir-gold-secondary} !important;
+}
+
+// Performance optimizations
+.gir-gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+// Accessibility enhancements
+.gir-focus-visible:focus-visible {
+  outline: 3px solid #{$gir-gold-primary};
+  outline-offset: 2px;
+  border-radius: #{$border-radius-sm};
+}
+
+// Print styles
+@media print {
+  .app-sidebar-menu,
+  .topbar-custom,
+  .gir-no-print {
+    display: none !important;
+  }
+
+  .content-page {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
+}

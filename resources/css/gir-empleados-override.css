@@ -1,0 +1,264 @@
+/**
+ * GIR-365 Empleados View - Force Style Override
+ * Asegura que los estilos Tailwind se apliquen correctamente
+ * incluso cuando hay conflictos con Bootstrap
+ */
+
+/* Force Tailwind Gradient Backgrounds */
+.tw-bg-gradient-to-br[class*='tw-from-gir-primary'] {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--tw-gradient-from, #b8954a) 0%,
+    var(--tw-gradient-via, #d1a854) 50%,
+    var(--tw-gradient-to, #edc979) 100%
+  ) !important;
+}
+
+/* Ensure White Backgrounds */
+.tw-bg-white {
+  background-color: #ffffff !important;
+}
+
+/* Force Border Radius */
+.tw-rounded-xl {
+  border-radius: 0.75rem !important;
+}
+
+.tw-rounded-2xl {
+  border-radius: 1rem !important;
+}
+
+.tw-rounded-3xl {
+  border-radius: 1.5rem !important;
+}
+
+/* Ensure Shadows */
+.tw-shadow-lg {
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.tw-shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Hover Effects */
+.tw-group:hover .tw-shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(209, 168, 84, 0.4) !important;
+}
+
+/* Text Colors */
+.tw-text-white {
+  color: #ffffff !important;
+}
+
+.tw-text-gir-primary-600 {
+  color: #b8954a !important;
+}
+
+.tw-text-gir-warm-gray-500 {
+  color: #847d77 !important;
+}
+
+.tw-text-gir-warm-gray-900 {
+  color: #45423a !important;
+}
+
+/* Padding Override */
+.tw-p-5 {
+  padding: 1.25rem !important;
+}
+
+.tw-p-6 {
+  padding: 1.5rem !important;
+}
+
+.tw-p-8 {
+  padding: 2rem !important;
+}
+
+.tw-p-10 {
+  padding: 2.5rem !important;
+}
+
+/* Gap Utilities */
+.tw-gap-3 {
+  gap: 0.75rem !important;
+}
+
+.tw-gap-4 {
+  gap: 1rem !important;
+}
+
+/* Flexbox */
+.tw-flex {
+  display: flex !important;
+}
+
+.tw-items-center {
+  align-items: center !important;
+}
+
+.tw-justify-between {
+  justify-content: space-between !important;
+}
+
+/* Grid */
+.tw-grid {
+  display: grid !important;
+}
+
+.tw-grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+}
+
+@media (min-width: 640px) {
+  .sm\:tw-grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:tw-grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Transitions */
+.tw-transition-all {
+  transition-property: all !important;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.tw-duration-300 {
+  transition-duration: 300ms !important;
+}
+
+.tw-duration-500 {
+  transition-duration: 500ms !important;
+}
+
+/* Hover Transform */
+.hover\:tw-scale-\[1\.02\]:hover {
+  transform: scale(1.02) !important;
+}
+
+.hover\:tw--translate-y-1:hover {
+  transform: translateY(-0.25rem) !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tw-animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards !important;
+}
+
+/* Relative & Absolute Positioning */
+.tw-relative {
+  position: relative !important;
+}
+
+.tw-absolute {
+  position: absolute !important;
+}
+
+.tw-inset-0 {
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+}
+
+/* Z-Index */
+.tw-z-10 {
+  z-index: 10 !important;
+}
+
+/* Overflow */
+.tw-overflow-hidden {
+  overflow: hidden !important;
+}
+
+/* Borders */
+.tw-border {
+  border-width: 1px !important;
+}
+
+.tw-border-gir-warm-gray-100 {
+  border-color: #f0ede6 !important;
+}
+
+/* Font Weights */
+.tw-font-bold {
+  font-weight: 700 !important;
+}
+
+.tw-font-semibold {
+  font-weight: 600 !important;
+}
+
+.tw-font-medium {
+  font-weight: 500 !important;
+}
+
+/* Cursor */
+.tw-cursor-pointer {
+  cursor: pointer !important;
+}
+
+/* Backdrop Blur */
+.tw-backdrop-blur-md {
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+/* Margin Bottom */
+.tw-mb-6 {
+  margin-bottom: 1.5rem !important;
+}
+
+.tw-mb-8 {
+  margin-bottom: 2rem !important;
+}
+
+/* Responsive Typography */
+@media (min-width: 640px) {
+  .sm\:tw-text-3xl {
+    font-size: 1.875rem !important;
+    line-height: 2.25rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:tw-text-4xl {
+    font-size: 2.25rem !important;
+    line-height: 2.5rem !important;
+  }
+}
+
+/* 4K Ultra HD Specific */
+@media (min-width: 3840px) {
+  .\34k\:tw-text-6xl {
+    font-size: 3.75rem !important;
+    line-height: 1 !important;
+  }
+
+  .\34k\:tw-p-16 {
+    padding: 4rem !important;
+  }
+
+  .\34k\:tw-gap-8 {
+    gap: 2rem !important;
+  }
+}

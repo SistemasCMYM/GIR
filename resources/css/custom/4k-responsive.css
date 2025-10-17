@@ -1,0 +1,367 @@
+/**
+ * GIR-365 Silva Dashboard - 4K Ultra HD & Ultra Responsive Styles
+ * Optimizado para resoluciones: 280px (smartwatch) - 3840px+ (4K)
+ * Tecnologías: Tailwind 4.1.12 + CSS Variables Modernas
+ */
+
+/* =================================================================
+   BREAKPOINTS PERSONALIZADOS - ULTRA RESPONSIVE
+   ================================================================= */
+
+/* Smartwatch (280px+) */
+@media (min-width: 280px) {
+  :root {
+    --base-font-size: 12px;
+    --heading-scale: 1.2;
+    --spacing-unit: 0.25rem;
+  }
+}
+
+/* Foldable Devices (720px+) */
+@media (min-width: 720px) {
+  :root {
+    --base-font-size: 14px;
+    --heading-scale: 1.5;
+    --spacing-unit: 0.5rem;
+  }
+}
+
+/* Desktop HD (1920px+) */
+@media (min-width: 1920px) {
+  :root {
+    --base-font-size: 16px;
+    --heading-scale: 1.8;
+    --spacing-unit: 1rem;
+  }
+}
+
+/* 4K Ultra HD (3840px+) */
+@media (min-width: 3840px) {
+  :root {
+    --base-font-size: 24px;
+    --heading-scale: 2.5;
+    --spacing-unit: 2rem;
+    --card-padding: 3rem;
+    --border-radius: 2rem;
+  }
+
+  /* Escalado automático de textos */
+  body {
+    font-size: var(--base-font-size);
+  }
+
+  /* Espaciado fluido */
+  .tw-container-fluid,
+  .tw-max-w-7xl,
+  .tw-max-w-\\[1920px\\] {
+    padding-left: calc(var(--spacing-unit) * 3);
+    padding-right: calc(var(--spacing-unit) * 3);
+  }
+
+  /* Iconos SVG escalados */
+  svg,
+  i[class*='fa-'] {
+    transform: scale(1.5);
+  }
+}
+
+/* =================================================================
+   ANIMACIONES PERSONALIZADAS - SILVA DASHBOARD
+   ================================================================= */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tw-animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tw-animate-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Pulse Glow Animation */
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+  }
+}
+
+.tw-animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Shimmer Loading Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.tw-animate-shimmer {
+  animation: shimmer 2s linear infinite;
+  background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+  background-size: 1000px 100%;
+}
+
+/* Float Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.tw-animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* =================================================================
+   TRANSICIONES SUAVES - MICRO INTERACCIONES
+   ================================================================= */
+
+/* Smooth All Transitions */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card Hover Effects */
+[class*='tw-group']:hover {
+  will-change: transform;
+}
+
+/* Button Press Effect */
+button:active,
+a:active {
+  transform: scale(0.98);
+}
+
+/* =================================================================
+   GRADIENTES PREMIUM - SILVA STYLE
+   ================================================================= */
+
+.tw-bg-silva-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.tw-bg-gir-gradient-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #d97706 100%);
+}
+
+.tw-bg-gir-gradient-success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.tw-bg-gir-gradient-warning {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.tw-bg-gir-gradient-danger {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+/* =================================================================
+   SOMBRAS ELEVADAS - PROFUNDIDAD VISUAL
+   ================================================================= */
+
+.tw-shadow-gir-sm {
+  box-shadow:
+    0 1px 2px 0 rgba(0, 0, 0, 0.05),
+    0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.tw-shadow-gir {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.tw-shadow-gir-md {
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.tw-shadow-gir-lg {
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.tw-shadow-gir-xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.tw-shadow-2xl {
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* =================================================================
+   GLASSMORPHISM - EFECTOS CRISTAL
+   ================================================================= */
+
+.tw-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tw-glass-dark {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* =================================================================
+   SCROLLBAR PERSONALIZADO - ESTILO MODERNO
+   ================================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #3b82f6 0%, #d97706 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #b45309 100%);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #f1f1f1;
+}
+
+/* =================================================================
+   ACCESIBILIDAD - FOCUS STATES
+   ================================================================= */
+
+button:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Focus visible mejorado */
+*:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 3px;
+  transition: outline-offset 0.2s ease;
+}
+
+/* =================================================================
+   PRINT STYLES - OPTIMIZACIÓN DE IMPRESIÓN
+   ================================================================= */
+
+@media print {
+  body {
+    background: white !important;
+  }
+
+  /* Ocultar elementos no imprimibles */
+  .app-sidebar-menu,
+  .topbar-custom,
+  button,
+  [data-bs-toggle],
+  .modal {
+    display: none !important;
+  }
+
+  /* Optimizar colores para impresión */
+  * {
+    color: black !important;
+    background: white !important;
+    box-shadow: none !important;
+  }
+
+  /* Forzar saltos de página */
+  .page-break {
+    page-break-after: always;
+  }
+}
+
+/* =================================================================
+   DARK MODE - SOPORTE FUTURO
+   ================================================================= */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1a1a1a;
+    --text-primary: #ffffff;
+    --border-color: #333333;
+  }
+
+  /* Aplicar solo si data-theme="dark" */
+  [data-theme='dark'] {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+}
+
+/* =================================================================
+   PERFORMANCE OPTIMIZATIONS
+   ================================================================= */
+
+/* GPU Acceleration */
+.tw-gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Reducir motion para usuarios con preferencias */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

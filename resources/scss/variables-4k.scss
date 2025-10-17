@@ -1,0 +1,165 @@
+/**
+ * GIR-365 Variables - Silva Dashboard Integration
+ * Laravel 12 + Vite + Bootstrap 5.3 + MongoDB 8.0
+ * Silva Dashboard Theme Variables
+ */
+
+// GIR-365 Corporate Colors (Override Silva defaults)
+$primary: #d1a854 !default; // GIR-365 Gold Primary
+$secondary: #edc979 !default; // GIR-365 Gold Secondary
+$success: #28a745 !default;
+$info: #17a2b8 !default;
+$warning: #ffc107 !default;
+$danger: #dc3545 !default;
+$light: #f8f9fa !default;
+$dark: #343a40 !default;
+
+// GIR-365 Gold Palette
+$gir-gold-primary: #d1a854 !default;
+$gir-gold-secondary: #edc979 !default;
+$gir-gold-light: #f7e98e !default;
+$gir-gold-dark: #8b6914 !default;
+
+// Silva Dashboard Layout Variables
+$sidebar-width: 280px !default;
+$sidebar-width-sm: 70px !default;
+$topbar-height: 70px !default;
+$grid-gutter-width: 30px !default;
+
+// Silva Background Colors (Dark Sidebar, Light Content)
+$sidebar-bg: #000000 !default;
+$sidebar-bg-dark: #1a1a1a !default;
+$topbar-bg-light: #ffffff !default;
+$body-bg: #ffffff !default;
+$card-bg: #ffffff !default;
+
+// Silva Text Colors
+$body-color: #4a5a6b !default;
+$text-muted: #6c757d !default;
+$sidebar-item: rgba(255, 255, 255, 0.85) !default;
+$sidebar-item-hover: $gir-gold-primary !default;
+$sidebar-item-active: $gir-gold-primary !default;
+
+// Silva Dark Sidebar Colors
+$sidebar-item-color-dark: rgba(255, 255, 255, 0.85) !default;
+$sidebar-item-hover-color-dark: $gir-gold-primary !default;
+$sidebar-item-active-color-dark: #000000 !default;
+$sidebar-item-active-bg: rgba($gir-gold-primary, 0.15) !default;
+
+// Silva Font Sizes
+$sidebar-item-size: 0.9375rem !default;
+$sidebar-sub-item-size: 0.875rem !default;
+
+// Silva Box Shadows
+$box-shadow-sm: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08) !default;
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !default;
+$box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175) !default;
+
+// Silva Border Radius
+$border-radius: 0.475rem !default;
+$border-radius-sm: 0.325rem !default;
+$border-radius-lg: 0.75rem !default;
+
+// Silva Font Family
+$font-family-sans-serif:
+  'Inter',
+  'Public Sans',
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  'Helvetica Neue',
+  Arial,
+  sans-serif !default;
+
+// Silva Transitions
+$transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !default;
+
+// 4K Display Variables
+$breakpoint-4k: 3840px !default;
+$container-max-width-4k: 3200px !default;
+
+// Silva Dashboard Responsive Breakpoints (matching Bootstrap)
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  4k: $breakpoint-4k
+) !default;
+
+// Silva Container Max Widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  4k: $container-max-width-4k
+) !default;
+
+// Animation & Timing
+$animation-duration-fast: 0.15s !default;
+$animation-duration-base: 0.3s !default;
+$animation-duration-slow: 0.5s !default;
+$animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !default;
+
+// Z-index scale
+$zindex-sidebar: 1000 !default;
+$zindex-topbar: 999 !default;
+$zindex-overlay: 1050 !default;
+$zindex-tooltip: 1070 !default;
+$zindex-dropdown: 1000 !default;
+
+// Component specific variables
+$card-border-width: 1px !default;
+$card-border-color: rgba(0, 0, 0, 0.125) !default;
+$card-inner-border-radius: calc(#{$border-radius} - #{$card-border-width}) !default;
+
+// Tables
+$table-cell-padding-y: 0.75rem !default;
+$table-cell-padding-x: 0.75rem !default;
+$table-striped-bg: rgba(0, 0, 0, 0.025) !default;
+$table-hover-bg: rgba(0, 0, 0, 0.075) !default;
+
+// Buttons
+$btn-padding-y: 0.375rem !default;
+$btn-padding-x: 0.75rem !default;
+$btn-font-size: 0.875rem !default;
+$btn-border-radius: $border-radius !default;
+
+// Forms
+$input-padding-y: 0.375rem !default;
+$input-padding-x: 0.75rem !default;
+$input-font-size: 0.875rem !default;
+$input-border-color: #ced4da !default;
+$input-border-radius: $border-radius !default;
+$input-focus-border-color: $gir-gold-primary !default;
+$input-focus-box-shadow: 0 0 0 0.2rem rgba($gir-gold-primary, 0.25) !default;
+
+// Navbar
+$navbar-padding-y: 0.5rem !default;
+$navbar-padding-x: 1rem !default;
+$navbar-nav-link-padding-x: 0.5rem !default;
+$navbar-brand-font-size: 1.25rem !default;
+
+// Silva Footer Colors
+$footer-bg: #ffffff !default;
+
+// Gray scale for compatibility
+$grays: (
+  '100': #f8f9fa,
+  '200': #f0f4f7,
+  '300': #dee2e6,
+  '400': #ced4da,
+  '500': #adb5bd,
+  '600': #6c757d,
+  '700': #4a5a6b,
+  '800': #343a40,
+  '900': #060707
+) !default;
+
+// Silva Dashboard specific mixins and utilities will be available
+// through the imported Silva SCSS files

@@ -1,0 +1,69 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Security Headers
+    <IfModule mod_headers.c>
+        # Forzar HTTPS en producción
+        Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        
+        # Protección XSS
+        Header always set X-Content-Type-Options "nosniff"
+        Header always set X-Frame-Options "DENY"
+        Header always set X-XSS-Protection "1; mode=block"
+        Header always set Referrer-Policy "strict-origin-when-cross-origin"
+        
+        # Content Security Policy básica
+        Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none';"
+        
+        # Remover headers que revelan información del servidor
+        Header always unset X-Powered-By
+        Header always unset Server
+    </IfModule>
+
+    # Bloquear acceso a archivos sensibles
+    <FilesMatch "\.(env|git|svn|htaccess|htpasswd|ini|log|sh|sql|conf)$">
+        Order Allow,Deny
+        Deny from all
+    </FilesMatch>
+
+    # Protección contra ataques de fuerza bruta
+    <IfModule mod_evasive24.c>
+        DOSHashTableSize    2048
+        DOSPageCount        10
+        DOSPageInterval     1
+        DOSSiteCount        50
+        DOSSiteInterval     1
+        DOSBlockingPeriod   86400
+    </IfModule>
+
+    # Limitar tamaño de request
+    <IfModule mod_reqtimeout.c>
+        RequestReadTimeout header=20-40,MinRate=500 body=20,MinRate=500
+    </IfModule>
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Handle X-XSRF-Token Header
+    RewriteCond %{HTTP:x-xsrf-token} .
+    RewriteRule .* - [E=HTTP_X_XSRF_TOKEN:%{HTTP:X-XSRF-Token}]
+
+    # Forzar HTTPS (opcional, solo en producción)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

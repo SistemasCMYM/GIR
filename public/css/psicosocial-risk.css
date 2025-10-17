@@ -1,0 +1,2102 @@
+/* ============================================
+   DISEÑO MODERNO - DISTRIBUCIÓN DE RIESGO
+   Estilos fallback para cuando Tailwind no está compilado
+   ============================================ */
+
+.module-card {
+  transition: transform 0.2s;
+  border: none;
+}
+
+.module-card:hover {
+  transform: translateY(-3px);
+}
+
+.module-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ============================================
+    DISEÑO COMPACTO - DISTRIBUCIÓN DE RIESGO
+    ============================================ */
+
+/* Contenedor principal */
+.risk-distribution-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+/* Header con gradiente */
+.risk-header {
+  background: linear-gradient(90deg, #eef2ff 0%, #f3e8ff 100%);
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.risk-header-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #6366f1 0%, #9333ea 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.3);
+}
+
+.risk-header-icon i {
+  color: white;
+  font-size: 18px;
+}
+
+.risk-header-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.risk-header-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Grid de tarjetas */
+.risk-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .risk-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .risk-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Tarjetas de riesgo individuales */
+.risk-item {
+  position: relative;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 2px solid;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.risk-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Sin Riesgo - Verde */
+.risk-success {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-color: #bbf7d0;
+}
+
+.risk-success:hover {
+  border-color: #86efac;
+}
+
+.risk-success .risk-icon-badge {
+  background: #22c55e;
+}
+
+.risk-success .risk-number {
+  color: #15803d;
+}
+
+.risk-success .risk-label {
+  color: #16a34a;
+}
+
+.risk-success .risk-percentage {
+  color: #4ade80;
+}
+
+/* Riesgo Bajo - Teal */
+.risk-low {
+  background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+  border-color: #99f6e4;
+}
+
+.risk-low:hover {
+  border-color: #5eead4;
+}
+
+.risk-low .risk-icon-badge {
+  background: #14b8a6;
+}
+
+.risk-low .risk-number {
+  color: #115e59;
+}
+
+.risk-low .risk-label {
+  color: #0f766e;
+}
+
+.risk-low .risk-percentage {
+  color: #2dd4bf;
+}
+
+/* Riesgo Medio - Amarillo */
+.risk-medium {
+  background: linear-gradient(135deg, #fefce8 0%, #fef08a 100%);
+  border-color: #fde047;
+}
+
+.risk-medium:hover {
+  border-color: #facc15;
+}
+
+.risk-medium .risk-icon-badge {
+  background: #eab308;
+}
+
+.risk-medium .risk-number {
+  color: #854d0e;
+}
+
+.risk-medium .risk-label {
+  color: #a16207;
+}
+
+.risk-medium .risk-percentage {
+  color: #ca8a04;
+}
+
+/* Riesgo Alto - Naranja */
+.risk-high {
+  background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%);
+  border-color: #fdba74;
+}
+
+.risk-high:hover {
+  border-color: #fb923c;
+}
+
+.risk-high .risk-icon-badge {
+  background: #f97316;
+}
+
+.risk-high .risk-number {
+  color: #9a3412;
+}
+
+.risk-high .risk-label {
+  color: #c2410c;
+}
+
+.risk-high .risk-percentage {
+  color: #ea580c;
+}
+
+/* Riesgo Muy Alto - Rojo */
+.risk-critical {
+  background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
+  border-color: #fca5a5;
+}
+
+.risk-critical:hover {
+  border-color: #f87171;
+}
+
+.risk-critical .risk-icon-badge {
+  background: #dc2626;
+}
+
+.risk-critical .risk-number {
+  color: #991b1b;
+}
+
+.risk-critical .risk-label {
+  color: #b91c1c;
+}
+
+.risk-critical .risk-percentage {
+  color: #ef4444;
+}
+
+/* Elementos de las tarjetas */
+.risk-icon-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.risk-icon-badge i {
+  color: white;
+  font-size: 12px;
+}
+
+.risk-number {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 8px 0 4px;
+}
+
+.risk-label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.risk-percentage {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Separador */
+.risk-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d1d5db, transparent);
+  margin: 0 1.5rem 1.5rem;
+}
+
+/* Sección de porcentaje completado */
+.completion-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid #e0e7ff;
+  margin: 0 1.5rem 1.5rem;
+}
+
+.completion-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .completion-content {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* Círculo de progreso */
+.completion-circle {
+  flex-shrink: 0;
+  width: 96px;
+  height: 96px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.completion-circle svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.completion-circle-bg {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 8;
+}
+
+.completion-circle-progress {
+  fill: none;
+  stroke: url(#gradient-progress);
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.completion-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.completion-percentage {
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #6366f1 0%, #9333ea 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.completion-label-small {
+  font-size: 11px;
+  color: #6b7280;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* Información del progreso */
+.completion-info {
+  flex: 1;
+}
+
+.completion-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.completion-title i {
+  color: #6366f1;
+}
+
+/* Barra de progreso moderna */
+.progress-bar-modern {
+  position: relative;
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.75rem;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1 0%, #9333ea 100%);
+  border-radius: 6px;
+  transition: width 1s ease-in-out;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(99, 102, 241, 0.3);
+}
+
+.progress-bar-fill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Estadísticas */
+.completion-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 12px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.stat-dot-green {
+  background: #22c55e;
+}
+
+.stat-dot-blue {
+  background: #3b82f6;
+}
+
+.stat-dot-amber {
+  background: #f59e0b;
+}
+
+.stat-text {
+  color: #6b7280;
+}
+
+.stat-number {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .risk-grid {
+    padding: 1rem;
+  }
+
+  .risk-item {
+    padding: 0.75rem;
+  }
+
+  .risk-number {
+    font-size: 24px;
+  }
+
+  .completion-section {
+    margin: 0 1rem 1rem;
+    padding: 1rem;
+  }
+
+  .completion-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .completion-percentage {
+    font-size: 24px;
+  }
+}
+
+.risk-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--risk-color-start), var(--risk-color-end));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.risk-card:hover::before {
+  transform: scaleX(1);
+}
+
+.risk-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--risk-color-start);
+}
+
+.risk-card-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* Iconos de las tarjetas */
+.risk-icon-badge {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Sin Riesgo - Verde */
+.risk-card-success {
+  --risk-color-start: #008235;
+  --risk-color-end: #00a844;
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+.risk-card-success .risk-icon-badge {
+  background: linear-gradient(135deg, #008235 0%, #00a844 100%);
+}
+
+.risk-card-success .risk-number {
+  color: #008235;
+}
+
+/* Riesgo Bajo - Verde Claro */
+.risk-card-low {
+  --risk-color-start: #00d364;
+  --risk-color-end: #00ff7f;
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+}
+
+.risk-card-low .risk-icon-badge {
+  background: linear-gradient(135deg, #00d364 0%, #00ff7f 100%);
+}
+
+.risk-card-low .risk-number {
+  color: #00d364;
+}
+
+/* Riesgo Medio - Amarillo */
+.risk-card-medium {
+  --risk-color-start: #ffd600;
+  --risk-color-end: #ffd700;
+  background: linear-gradient(135deg, #fefce8 0%, #fef08a 100%);
+}
+
+.risk-card-medium .risk-icon-badge {
+  background: linear-gradient(135deg, #ffd600 0%, #ffd700 100%);
+  color: #000;
+}
+
+.risk-card-medium .risk-number {
+  color: #d4a017;
+}
+
+/* Riesgo Alto - Rojo */
+.risk-card-high {
+  --risk-color-start: #dd0505;
+  --risk-color-end: #ff0000;
+  background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
+}
+
+.risk-card-high .risk-icon-badge {
+  background: linear-gradient(135deg, #dd0505 0%, #ff0000 100%);
+}
+
+.risk-card-high .risk-number {
+  color: #dd0505;
+}
+
+/* Riesgo Muy Alto - Rojo Oscuro */
+.risk-card-critical {
+  --risk-color-start: #a30203;
+  --risk-color-end: #8b0000;
+  background: linear-gradient(135deg, #fee2e2 0%, #fca5a5 100%);
+}
+
+.risk-card-critical .risk-icon-badge {
+  background: linear-gradient(135deg, #a30203 0%, #8b0000 100%);
+}
+
+.risk-card-critical .risk-number {
+  color: #a30203;
+}
+
+/* Números y etiquetas */
+.risk-number {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 12px 0 8px;
+}
+
+.risk-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.risk-percentage {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Separador con gradiente */
+.progress-divider {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(102, 126, 234, 0) 0%,
+    rgba(102, 126, 234, 0.5) 50%,
+    rgba(102, 126, 234, 0) 100%
+  );
+  margin: 32px 0;
+}
+
+/* ============================================
+                                                    SECCIÓN DE PORCENTAJE COMPLETADO
+                                                    ============================================ */
+
+.completion-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Círculo de progreso SVG */
+.completion-circle {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.completion-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.completion-bg {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 8;
+}
+
+.completion-progress {
+  fill: none;
+  stroke: url(#gradient-completion);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 339.292;
+  /* 2 * π * 54 */
+  stroke-dashoffset: calc(339.292 - (339.292 * var(--progress)) / 100);
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+/* Texto dentro del círculo */
+.completion-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.completion-percentage {
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.completion-label {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+/* Barra de progreso moderna */
+.progress-modern {
+  height: 24px;
+  background: #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-modern-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 12px;
+  transition: width 1s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-modern-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.progress-modern-label {
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .risk-card {
+    padding: 20px 12px;
+    margin-bottom: 12px;
+  }
+
+  .risk-number {
+    font-size: 28px;
+  }
+
+  .risk-icon-badge {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .completion-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .completion-percentage {
+    font-size: 28px;
+  }
+
+  .completion-section {
+    padding: 24px 16px;
+  }
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.tw-bg-white {
+  background-color: white !important;
+}
+.tw-rounded-2xl {
+  border-radius: 16px !important;
+}
+.tw-rounded-xl {
+  border-radius: 12px !important;
+}
+.tw-rounded-lg {
+  border-radius: 8px !important;
+}
+.tw-rounded-full {
+  border-radius: 9999px !important;
+}
+.tw-rounded-t-xl {
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+}
+
+.tw-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+.tw-shadow-md {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+.tw-shadow-lg {
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+.tw-shadow-xl {
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Sombras de colores */
+.tw-shadow-green-200 {
+  box-shadow: 0 10px 15px -3px rgba(187, 247, 208, 0.5) !important;
+}
+.tw-shadow-cyan-200 {
+  box-shadow: 0 10px 15px -3px rgba(165, 243, 252, 0.5) !important;
+}
+.tw-shadow-yellow-200 {
+  box-shadow: 0 10px 15px -3px rgba(254, 240, 138, 0.5) !important;
+}
+.tw-shadow-orange-200 {
+  box-shadow: 0 10px 15px -3px rgba(254, 215, 170, 0.5) !important;
+}
+.tw-shadow-red-200 {
+  box-shadow: 0 10px 15px -3px rgba(254, 202, 202, 0.5) !important;
+}
+
+.tw-border {
+  border-width: 1px !important;
+  border-style: solid !important;
+}
+.tw-border-t {
+  border-top-width: 1px !important;
+  border-top-style: solid !important;
+}
+.tw-border-gray-100 {
+  border-color: #f3f4f6 !important;
+}
+.tw-border-gray-200 {
+  border-color: #e5e7eb !important;
+}
+
+.tw-p-3 {
+  padding: 0.75rem !important;
+}
+.tw-p-5 {
+  padding: 1.25rem !important;
+}
+.tw-p-6 {
+  padding: 1.5rem !important;
+}
+.tw-px-3 {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+.tw-py-1 {
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+.tw-pb-4 {
+  padding-bottom: 1rem !important;
+}
+
+.tw-my-6 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+.tw-mb-0 {
+  margin-bottom: 0 !important;
+}
+.tw-mb-1 {
+  margin-bottom: 0.25rem !important;
+}
+.tw-mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+.tw-mb-3 {
+  margin-bottom: 0.75rem !important;
+}
+.tw-mb-4 {
+  margin-bottom: 1rem !important;
+}
+.tw-mb-6 {
+  margin-bottom: 1.5rem !important;
+}
+.tw-mt-1 {
+  margin-top: 0.25rem !important;
+}
+.tw-mt-4 {
+  margin-top: 1rem !important;
+}
+
+/* === FLEX Y GRID === */
+.tw-flex {
+  display: flex !important;
+}
+.tw-flex-col {
+  flex-direction: column !important;
+}
+.tw-flex-1 {
+  flex: 1 !important;
+}
+.tw-flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+.tw-items-center {
+  align-items: center !important;
+}
+.tw-justify-start {
+  justify-content: flex-start !important;
+}
+.tw-justify-center {
+  justify-content: center !important;
+}
+.tw-gap-2 {
+  gap: 0.5rem !important;
+}
+.tw-gap-3 {
+  gap: 0.75rem !important;
+}
+.tw-gap-4 {
+  gap: 1rem !important;
+}
+.tw-gap-8 {
+  gap: 2rem !important;
+}
+
+.tw-grid {
+  display: grid !important;
+}
+.tw-grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+}
+.tw-grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+@media (min-width: 768px) {
+  .md\:tw-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+  .md\:tw-flex-row {
+    flex-direction: row !important;
+  }
+  .md\:tw-text-left {
+    text-align: left !important;
+  }
+  .md\:tw-justify-start {
+    justify-content: flex-start !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .lg\:tw-grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+}
+
+/* === TAMAÑOS === */
+.tw-w-10 {
+  width: 2.5rem !important;
+}
+.tw-h-10 {
+  height: 2.5rem !important;
+}
+.tw-w-14 {
+  width: 3.5rem !important;
+}
+.tw-h-14 {
+  height: 3.5rem !important;
+}
+.tw-w-32 {
+  width: 8rem !important;
+}
+.tw-h-32 {
+  height: 8rem !important;
+}
+.tw-w-full {
+  width: 100% !important;
+}
+.tw-h-full {
+  height: 100% !important;
+}
+.tw-h-1 {
+  height: 0.25rem !important;
+}
+
+/* === POSICIONAMIENTO === */
+.tw-relative {
+  position: relative !important;
+}
+.tw-absolute {
+  position: absolute !important;
+}
+.tw-inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0 !important;
+}
+.tw-top-0 {
+  top: 0 !important;
+}
+.tw-left-0 {
+  left: 0 !important;
+}
+.tw-right-0 {
+  right: 0 !important;
+}
+
+/* === TIPOGRAFÍA === */
+.tw-text-xs {
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
+}
+.tw-text-sm {
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+}
+.tw-text-base {
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+}
+.tw-text-lg {
+  font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+}
+.tw-text-xl {
+  font-size: 1.25rem !important;
+  line-height: 1.75rem !important;
+}
+.tw-text-3xl {
+  font-size: 1.875rem !important;
+  line-height: 2.25rem !important;
+}
+
+.tw-font-medium {
+  font-weight: 500 !important;
+}
+.tw-font-semibold {
+  font-weight: 600 !important;
+}
+.tw-font-bold {
+  font-weight: 700 !important;
+}
+
+.tw-text-center {
+  text-align: center !important;
+}
+
+/* Colores de texto */
+.tw-text-white {
+  color: white !important;
+}
+.tw-text-gray-500 {
+  color: #6b7280 !important;
+}
+.tw-text-gray-600 {
+  color: #4b5563 !important;
+}
+.tw-text-gray-800 {
+  color: #1f2937 !important;
+}
+.tw-text-green-600 {
+  color: #16a34a !important;
+}
+.tw-text-cyan-600 {
+  color: #0891b2 !important;
+}
+.tw-text-blue-600 {
+  color: #2563eb !important;
+}
+.tw-text-yellow-600 {
+  color: #ca8a04 !important;
+}
+.tw-text-orange-600 {
+  color: #ea580c !important;
+}
+.tw-text-red-600 {
+  color: #dc2626 !important;
+}
+.tw-text-purple-600 {
+  color: #9333ea !important;
+}
+
+/* === FONDOS === */
+.tw-bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops)) !important;
+}
+.tw-bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)) !important;
+}
+
+/* Fondos con gradientes específicos */
+.tw-from-blue-500.tw-to-purple-600 {
+  background: linear-gradient(135deg, #3b82f6 0%, #9333ea 100%) !important;
+}
+.tw-from-green-400.tw-to-emerald-500 {
+  background: linear-gradient(to right, #4ade80 0%, #10b981 100%) !important;
+}
+.tw-from-cyan-400.tw-to-blue-500 {
+  background: linear-gradient(to right, #22d3ee 0%, #3b82f6 100%) !important;
+}
+.tw-from-yellow-400.tw-to-amber-500 {
+  background: linear-gradient(to right, #facc15 0%, #f59e0b 100%) !important;
+}
+.tw-from-orange-400.tw-to-red-500 {
+  background: linear-gradient(to right, #fb923c 0%, #ef4444 100%) !important;
+}
+.tw-from-red-500.tw-to-rose-600 {
+  background: linear-gradient(to right, #ef4444 0%, #e11d48 100%) !important;
+}
+
+/* Fondos con gradientes para gráfica radial */
+.tw-from-blue-50.tw-via-purple-50.tw-to-pink-50 {
+  background: linear-gradient(135deg, #eff6ff 0%, #faf5ff 50%, #fdf2f8 100%) !important;
+}
+
+/* Fondos sólidos */
+.tw-bg-green-50 {
+  background-color: #f0fdf4 !important;
+}
+.tw-bg-cyan-50 {
+  background-color: #ecfeff !important;
+}
+.tw-bg-yellow-50 {
+  background-color: #fefce8 !important;
+}
+.tw-bg-orange-50 {
+  background-color: #fff7ed !important;
+}
+.tw-bg-red-50 {
+  background-color: #fef2f2 !important;
+}
+
+/* === HOVER EFFECTS === */
+.tw-group:hover .hover\:tw-shadow-xl {
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+.tw-group:hover .hover\:tw--translate-y-2 {
+  transform: translateY(-8px) !important;
+}
+.tw-group:hover.hover\:tw-border-green-400 {
+  border-color: #4ade80 !important;
+}
+.tw-group:hover.hover\:tw-border-cyan-400 {
+  border-color: #22d3ee !important;
+}
+.tw-group:hover.hover\:tw-border-yellow-400 {
+  border-color: #facc15 !important;
+}
+.tw-group:hover.hover\:tw-border-orange-400 {
+  border-color: #fb923c !important;
+}
+.tw-group:hover.hover\:tw-border-red-500 {
+  border-color: #ef4444 !important;
+}
+
+/* === TRANSICIONES === */
+.tw-transition-all {
+  transition: all 0.3s ease !important;
+}
+.tw-duration-300 {
+  transition-duration: 300ms !important;
+}
+.tw-duration-1000 {
+  transition-duration: 1000ms !important;
+}
+.tw-ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1) !important;
+}
+
+/* === TRANSFORM === */
+.tw-transform {
+  transform: translateZ(0) !important;
+}
+.tw--rotate-90 {
+  transform: rotate(-90deg) !important;
+}
+
+/* === DISPLAY === */
+.tw-inline-block {
+  display: inline-block !important;
+}
+
+/* === GRADIENTE DE TEXTO === */
+.tw-bg-gradient-to-r.tw-from-blue-600.tw-via-purple-600.tw-to-pink-600 {
+  background: linear-gradient(to right, #2563eb, #9333ea, #db2777);
+}
+.tw-bg-clip-text {
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+.tw-text-transparent {
+  color: transparent !important;
+}
+
+.tw-bg-white {
+  background-color: white !important;
+}
+.tw-rounded-xl {
+  border-radius: 12px !important;
+}
+.tw-shadow-md {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+.tw-border {
+  border-width: 1px !important;
+}
+.tw-border-gray-200 {
+  border-color: #e5e7eb !important;
+}
+.tw-overflow-hidden {
+  overflow: hidden !important;
+}
+
+/* Header */
+.tw-bg-gradient-to-r {
+  background: linear-gradient(90deg, #eef2ff 0%, #f3e8ff 100%) !important;
+}
+.tw-from-indigo-50 {
+  /* gradient start */
+}
+.tw-to-purple-50 {
+  /* gradient end */
+}
+.tw-px-6 {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+.tw-py-4 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+.tw-border-b {
+  border-bottom-width: 1px !important;
+}
+
+.tw-flex {
+  display: flex !important;
+}
+.tw-items-center {
+  align-items: center !important;
+}
+.tw-gap-3 {
+  gap: 0.75rem !important;
+}
+
+.tw-w-10 {
+  width: 2.5rem !important;
+}
+.tw-h-10 {
+  height: 2.5rem !important;
+}
+.tw-bg-gradient-to-br {
+  background: linear-gradient(135deg, #6366f1 0%, #9333ea 100%) !important;
+}
+.tw-from-indigo-500 {
+  /* gradient start */
+}
+.tw-to-purple-600 {
+  /* gradient end */
+}
+.tw-rounded-lg {
+  border-radius: 8px !important;
+}
+.tw-justify-center {
+  justify-content: center !important;
+}
+
+.tw-text-white {
+  color: white !important;
+}
+.tw-text-lg {
+  font-size: 18px !important;
+}
+.tw-font-bold {
+  font-weight: 700 !important;
+}
+.tw-text-gray-800 {
+  color: #1f2937 !important;
+}
+.tw-mb-0 {
+  margin-bottom: 0 !important;
+}
+.tw-text-sm {
+  font-size: 14px !important;
+}
+.tw-text-gray-600 {
+  color: #6b7280 !important;
+}
+
+/* Grid */
+.tw-p-6 {
+  padding: 1.5rem !important;
+}
+.tw-grid {
+  display: grid !important;
+}
+.tw-grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+.tw-gap-3 {
+  gap: 0.75rem !important;
+}
+.tw-mb-6 {
+  margin-bottom: 1.5rem !important;
+}
+
+@media (min-width: 768px) {
+  .md\:tw-grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .lg\:tw-grid-cols-5 {
+    grid-template-columns: repeat(5, 1fr) !important;
+  }
+}
+
+/* Tarjetas */
+.tw-group {
+  /* group container */
+}
+.tw-relative {
+  position: relative !important;
+}
+.tw-p-4 {
+  padding: 1rem !important;
+}
+.tw-border-2 {
+  border-width: 2px !important;
+}
+.tw-transition-all {
+  transition: all 0.3s ease !important;
+}
+.tw-duration-300 {
+  transition-duration: 300ms !important;
+}
+
+/* Sin Riesgo */
+.tw-bg-gradient-to-br.tw-from-green-50.tw-to-emerald-50 {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%) !important;
+}
+.tw-border-green-200 {
+  border-color: #bbf7d0 !important;
+}
+
+.tw-group:hover .hover\:tw-shadow-lg {
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+.tw-group:hover .hover\:tw--translate-y-1 {
+  transform: translateY(-4px) !important;
+}
+.tw-group:hover .hover\:tw-border-green-400 {
+  border-color: #86efac !important;
+}
+
+/* Iconos */
+.tw-absolute {
+  position: absolute !important;
+}
+.tw-top-2 {
+  top: 0.5rem !important;
+}
+.tw-right-2 {
+  right: 0.5rem !important;
+}
+.tw-w-8 {
+  width: 2rem !important;
+}
+.tw-h-8 {
+  height: 2rem !important;
+}
+.tw-bg-green-500 {
+  background-color: #22c55e !important;
+}
+.tw-rounded-full {
+  border-radius: 9999px !important;
+}
+
+.tw-text-xs {
+  font-size: 12px !important;
+}
+.tw-text-center {
+  text-align: center !important;
+}
+.tw-mt-2 {
+  margin-top: 0.5rem !important;
+}
+.tw-text-3xl {
+  font-size: 32px !important;
+}
+.tw-text-green-700 {
+  color: #15803d !important;
+}
+.tw-mb-1 {
+  margin-bottom: 0.25rem !important;
+}
+.tw-font-semibold {
+  font-weight: 600 !important;
+}
+.tw-text-green-600 {
+  color: #16a34a !important;
+}
+.tw-text-green-500 {
+  color: #4ade80 !important;
+}
+
+/* Riesgo Bajo - Teal */
+.tw-from-teal-50.tw-to-cyan-50 {
+  background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%) !important;
+}
+.tw-border-teal-200 {
+  border-color: #99f6e4 !important;
+}
+.tw-bg-teal-500 {
+  background-color: #14b8a6 !important;
+}
+.tw-text-teal-700 {
+  color: #115e59 !important;
+}
+.tw-text-teal-600 {
+  color: #0f766e !important;
+}
+.tw-text-teal-500 {
+  color: #2dd4bf !important;
+}
+
+/* Riesgo Medio - Amarillo */
+.tw-from-yellow-50.tw-to-amber-50 {
+  background: linear-gradient(135deg, #fefce8 0%, #fef08a 100%) !important;
+}
+.tw-border-yellow-300 {
+  border-color: #fde047 !important;
+}
+.tw-bg-yellow-500 {
+  background-color: #eab308 !important;
+}
+.tw-text-yellow-700 {
+  color: #854d0e !important;
+}
+.tw-text-yellow-600 {
+  color: #a16207 !important;
+}
+.tw-text-yellow-500 {
+  color: #ca8a04 !important;
+}
+
+/* Riesgo Alto - Naranja */
+.tw-from-orange-50.tw-to-red-50 {
+  background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%) !important;
+}
+.tw-border-orange-300 {
+  border-color: #fdba74 !important;
+}
+.tw-bg-orange-500 {
+  background-color: #f97316 !important;
+}
+.tw-text-orange-700 {
+  color: #9a3412 !important;
+}
+.tw-text-orange-600 {
+  color: #c2410c !important;
+}
+.tw-text-orange-500 {
+  color: #ea580c !important;
+}
+
+/* Riesgo Muy Alto - Rojo */
+.tw-from-red-50.tw-to-rose-50 {
+  background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%) !important;
+}
+.tw-border-red-300 {
+  border-color: #fca5a5 !important;
+}
+.tw-bg-red-600 {
+  background-color: #dc2626 !important;
+}
+.tw-text-red-700 {
+  color: #991b1b !important;
+}
+.tw-text-red-600 {
+  color: #b91c1c !important;
+}
+.tw-text-red-500 {
+  color: #ef4444 !important;
+}
+
+/* Separador */
+.tw-h-px {
+  height: 1px !important;
+}
+.tw-bg-gradient-to-r.tw-from-transparent.tw-via-gray-300.tw-to-transparent {
+  background: linear-gradient(90deg, transparent, #d1d5db, transparent) !important;
+}
+
+/* Completion section */
+.tw-from-indigo-50.tw-to-purple-50 {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+}
+.tw-p-5 {
+  padding: 1.25rem !important;
+}
+.tw-border-indigo-100 {
+  border-color: #e0e7ff !important;
+}
+.tw-flex-col {
+  flex-direction: column !important;
+}
+.tw-gap-6 {
+  gap: 1.5rem !important;
+}
+
+@media (min-width: 768px) {
+  .md\:tw-flex-row {
+    flex-direction: row !important;
+  }
+}
+
+.tw-flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+.tw-w-24 {
+  width: 6rem !important;
+}
+.tw-h-24 {
+  height: 6rem !important;
+}
+.tw-w-full {
+  width: 100% !important;
+}
+.tw-h-full {
+  height: 100% !important;
+}
+.tw-transform {
+  /* transform */
+}
+.tw--rotate-90 {
+  transform: rotate(-90deg) !important;
+}
+.tw-inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0 !important;
+}
+.tw-flex-col {
+  flex-direction: column !important;
+}
+
+.tw-text-2xl {
+  font-size: 24px !important;
+}
+.tw-text-indigo-600 {
+  color: #4f46e5 !important;
+}
+
+.tw-flex-1 {
+  flex: 1 !important;
+}
+.tw-text-base {
+  font-size: 16px !important;
+}
+.tw-mb-3 {
+  margin-bottom: 0.75rem !important;
+}
+.tw-text-indigo-500 {
+  color: #6366f1 !important;
+}
+.tw-mr-2 {
+  margin-right: 0.5rem !important;
+}
+
+.tw-h-3 {
+  height: 12px !important;
+}
+.tw-bg-gray-200 {
+  background-color: #e5e7eb !important;
+}
+.tw-rounded-full {
+  border-radius: 9999px !important;
+}
+.tw-overflow-hidden {
+  overflow: hidden !important;
+}
+.tw-shadow-inner {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.tw-from-indigo-500.tw-to-purple-600 {
+  background: linear-gradient(90deg, #6366f1 0%, #9333ea 100%) !important;
+}
+.tw-transition-all {
+  transition: all 1s ease-in-out !important;
+}
+.tw-duration-1000 {
+  transition-duration: 1000ms !important;
+}
+
+.tw-bg-white {
+  background-color: white !important;
+}
+.tw-opacity-20 {
+  opacity: 0.2 !important;
+}
+.tw-animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite !important;
+}
+
+.tw-flex-wrap {
+  flex-wrap: wrap !important;
+}
+.tw-gap-4 {
+  gap: 1rem !important;
+}
+.tw-gap-2 {
+  gap: 0.5rem !important;
+}
+.tw-w-2 {
+  width: 0.5rem !important;
+}
+.tw-h-2 {
+  height: 0.5rem !important;
+}
+
+/* SVG */
+.tw-hidden {
+  display: none !important;
+}
+
+/* ===================================
+   DISTRIBUCIÓN DE NIVELES DE RIESGO
+   Diseño Moderno con Colores Corporativos
+   =================================== */
+
+/* Contenedor Principal */
+.risk-distribution-container {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+}
+
+/* Header */
+.risk-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.risk-header-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+}
+
+.risk-header-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.risk-header-subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Grid de Tarjetas */
+.risk-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .risk-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .risk-cards-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Tarjeta de Riesgo Base */
+.risk-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.risk-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Barra Indicadora Superior */
+.risk-card-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+/* Contenedor del Icono */
+.risk-card-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.risk-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+/* Contenido */
+.risk-card-content {
+  text-align: center;
+}
+
+.risk-card-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.risk-card-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.risk-card-badge {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* COLORES ESPECÍFICOS POR NIVEL */
+
+/* Sin Riesgo - Verde #008235 */
+.risk-card-sin-riesgo .risk-card-indicator {
+  background: linear-gradient(90deg, #008235, #00a041);
+}
+
+.risk-card-sin-riesgo .risk-card-icon {
+  background: linear-gradient(135deg, #008235, #00a041);
+  box-shadow: 0 8px 16px rgba(0, 130, 53, 0.35);
+}
+
+.risk-card-sin-riesgo:hover {
+  box-shadow: 0 12px 24px rgba(0, 130, 53, 0.25);
+  border-color: #008235;
+}
+
+.risk-card-sin-riesgo .risk-card-badge {
+  background-color: rgba(0, 130, 53, 0.1);
+  color: #008235;
+}
+
+/* Riesgo Bajo - Verde #00D364 */
+.risk-card-bajo .risk-card-indicator {
+  background: linear-gradient(90deg, #00d364, #00ff7f);
+}
+
+.risk-card-bajo .risk-card-icon {
+  background: linear-gradient(135deg, #00d364, #00ff7f);
+  box-shadow: 0 8px 16px rgba(0, 211, 100, 0.35);
+}
+
+.risk-card-bajo:hover {
+  box-shadow: 0 12px 24px rgba(0, 211, 100, 0.25);
+  border-color: #00d364;
+}
+
+.risk-card-bajo .risk-card-badge {
+  background-color: rgba(0, 211, 100, 0.1);
+  color: #00a850;
+}
+
+/* Riesgo Medio - Amarillo #FFD600 */
+.risk-card-medio .risk-card-indicator {
+  background: linear-gradient(90deg, #ffd600, #ffeb3b);
+}
+
+.risk-card-medio .risk-card-icon {
+  background: linear-gradient(135deg, #ffd600, #ffeb3b);
+  box-shadow: 0 8px 16px rgba(255, 214, 0, 0.35);
+}
+
+.risk-card-medio:hover {
+  box-shadow: 0 12px 24px rgba(255, 214, 0, 0.25);
+  border-color: #ffd600;
+}
+
+.risk-card-medio .risk-card-badge {
+  background-color: rgba(255, 214, 0, 0.15);
+  color: #c7a600;
+}
+
+/* Riesgo Alto - Rojo #DD0505 */
+.risk-card-alto .risk-card-indicator {
+  background: linear-gradient(90deg, #dd0505, #ff3333);
+}
+
+.risk-card-alto .risk-card-icon {
+  background: linear-gradient(135deg, #dd0505, #ff3333);
+  box-shadow: 0 8px 16px rgba(221, 5, 5, 0.35);
+}
+
+.risk-card-alto:hover {
+  box-shadow: 0 12px 24px rgba(221, 5, 5, 0.25);
+  border-color: #dd0505;
+}
+
+.risk-card-alto .risk-card-badge {
+  background-color: rgba(221, 5, 5, 0.1);
+  color: #dd0505;
+}
+
+/* Riesgo Muy Alto - Rojo Oscuro #A30203 */
+.risk-card-muy-alto .risk-card-indicator {
+  background: linear-gradient(90deg, #a30203, #d32f2f);
+}
+
+.risk-card-muy-alto .risk-card-icon {
+  background: linear-gradient(135deg, #a30203, #d32f2f);
+  box-shadow: 0 8px 16px rgba(163, 2, 3, 0.35);
+}
+
+.risk-card-muy-alto:hover {
+  box-shadow: 0 12px 24px rgba(163, 2, 3, 0.25);
+  border-color: #a30203;
+}
+
+.risk-card-muy-alto .risk-card-badge {
+  background-color: rgba(163, 2, 3, 0.1);
+  color: #a30203;
+}
+
+/* SECCIÓN DE PORCENTAJE COMPLETADO */
+
+.completion-section {
+  background: linear-gradient(135deg, #eff6ff 0%, #f3e8ff 50%, #fce7f3 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  margin-top: 1.5rem;
+}
+
+.completion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .completion-container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* Gráfico Radial */
+.radial-chart-wrapper {
+  flex-shrink: 0;
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.radial-chart-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.radial-chart-bg {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 12;
+}
+
+.radial-chart-progress {
+  fill: none;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+/* Texto del Porcentaje */
+.radial-chart-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.radial-chart-percentage {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.radial-chart-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+/* Información */
+.completion-info {
+  flex: 1;
+}
+
+.completion-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.completion-subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+/* Grid de Estadísticas */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 0.75rem;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.stat-number {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.stat-number.completados {
+  color: #16a34a;
+}
+
+.stat-number.en-proceso {
+  color: #3b82f6;
+}
+
+.stat-number.pendientes {
+  color: #eab308;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Separador */
+.risk-separator {
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.risk-card {
+  animation: fadeIn 0.5s ease-out backwards;
+}
+
+.risk-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.risk-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.risk-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.risk-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.risk-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .risk-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .risk-card-number {
+    font-size: 1.5rem;
+  }
+
+  .radial-chart-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .radial-chart-percentage {
+    font-size: 1.75rem;
+  }
+}

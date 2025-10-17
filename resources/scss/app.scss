@@ -1,0 +1,605 @@
+@charset "UTF-8";
+
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Import Tailwind CSS (Tailwind CSS v4 syntax)
+@import 'tailwindcss';
+
+// Import Silva Dashboard Variables
+@import 'variables-4k';
+
+// Import Silva Dashboard Dropdown Component
+@import '../css/custom/componentes/dropdown';
+
+// Import 4K Ultra HD & Ultra Responsive Styles
+@import '../css/custom/4k-responsive.css';
+
+// Import GIR Empleados Force Override Styles
+@import '../css/gir-empleados-override.css';
+
+// GIR-365 Silva Dashboard Styles (Enhanced Specificity)
+body.gir-silva-dashboard,
+.gir-silva-dashboard {
+  background-color: #f8f9fa !important;
+}
+
+.gir-silva-dashboard .app-sidebar-menu,
+.app-sidebar-menu {
+  background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 50%, #5a5a5a 100%, #1a1a1a 100%) !important;
+  border-right: 2px solid rgba(209, 168, 84, 0.75) !important;
+  width: 280px !important;
+  position: fixed !important;
+  left: 0 !important;
+  top: 0 !important;
+  height: 100vh !important;
+  z-index: 1000 !important;
+  box-shadow: 2px 0 18px rgba(0, 0, 0, 0.35) !important;
+  overflow-y: auto;
+  transition:
+    width 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.gir-silva-dashboard .logo-box,
+.logo-box {
+  background: linear-gradient(135deg, rgba(209, 168, 84, 0.1), rgba(0, 0, 0, 0.3)) !important;
+  border-bottom: 1px solid rgba(209, 168, 84, 0.3) !important;
+  padding: 1rem !important;
+  text-align: center !important;
+  width: 280px !important;
+  height: 70px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.gir-silva-dashboard .logo-box .logo,
+.logo-box .logo {
+  color: #d1a854 !important;
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+}
+
+.gir-silva-dashboard .logo-box .logo:hover,
+.logo-box .logo:hover {
+  color: #edc979 !important;
+  text-decoration: none !important;
+}
+
+.gir-silva-dashboard .topbar-custom,
+.topbar-custom {
+  background: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 280px !important;
+  right: 0 !important;
+  height: 70px !important;
+  z-index: 999 !important;
+  border-bottom: 1px solid #e9ecef !important;
+  transition: left 0.25s ease;
+}
+
+.gir-silva-dashboard .content-page,
+.content-page {
+  margin-left: 280px !important;
+  margin-top: 70px !important;
+  padding: 2rem !important;
+  background: #f8f9fa !important;
+  min-height: calc(100vh - 70px) !important;
+  transition: margin-left 0.25s ease;
+}
+
+// Menu styling
+.gir-silva-dashboard #sidebar-menu ul,
+#sidebar-menu ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.gir-silva-dashboard #sidebar-menu ul li,
+#sidebar-menu ul li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.gir-silva-dashboard #sidebar-menu .tp-link,
+#sidebar-menu .tp-link {
+  display: flex !important;
+  align-items: center !important;
+  padding: 14px 20px !important;
+  color: rgba(244, 245, 247, 0.9) !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.gir-silva-dashboard #sidebar-menu .tp-link:hover,
+.gir-silva-dashboard t#sidebar-menu .tp-link.active,
+#sidebar-menu .tp-link:hover,
+#sidebar-menu .tp-link.active {
+  color: #edc979 !important;
+  background: linear-gradien(135deg, rgba(209, 168, 84, 0.16), rgba(209, 168, 84, 0.08)) !important;
+  border-left: 3px solid #d1a854 !important;
+  transform: translateX(4px) !important;
+}
+
+.gir-silva-dashboard #sidebar-menu .tp-link i,
+#sidebar-menu .tp-link i {
+  margin-right: 10px !important;
+  width: 16px !important;
+  font-size: 16px !important;
+}
+
+.gir-silva-dashboard .menu-title,
+.menu-title {
+  color: #d1a854 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  padding: 20px 20px 10px !important;
+  margin: 0 !important;
+}
+
+// Global styles (Updated for Silva Dashboard)
+:root {
+  --gir-primary: #d1a854;
+  --gir-secondary: #edc979;
+  --gir-success: #28a745;
+  --gir-danger: #dc3545;
+  --gir-warning: #ffc107;
+  --gir-info: #17a2b8;
+  --gir-light: #f8f9fa;
+  --gir-dark: #343a40;
+
+  // GIR-365 Gold colors
+  --gir-gold: #d1a854;
+  --gir-gold-secondary: #edc979;
+  --gir-gold-light: #f7e98e;
+  --gir-gold-dark: #8b6914;
+
+  // Silva Dashboard Layout
+  --sidebar-width: 280px;
+  --sidebar-collapsed-width: 70px;
+  --topbar-height: 70px;
+
+  // Font family
+  --gir-font-family: 'Inter', 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+// Base styles
+body {
+  font-family: var(--gir-font-family);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #1a1c1e;
+  background-color: #f5f7fb;
+}
+
+body.sidebar-enable {
+  overflow: hidden;
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 16, 20, 0.45);
+  backdrop-filter: blur(2px);
+  z-index: 990;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.sidebar-overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+// Custom utilities
+.text-gir-gold {
+  color: var(--gir-gold) !important;
+}
+
+.text-gir-warm-gray {
+  color: var(--gir-warm-gray) !important;
+}
+
+.bg-gir-gold {
+  background-color: var(--gir-gold) !important;
+}
+
+.bg-gir-warm-gray {
+  background-color: var(--gir-warm-gray) !important;
+}
+
+// Button variations
+.btn-gir-gold {
+  background-color: var(--gir-gold);
+  border-color: var(--gir-gold);
+  color: #ffffff;
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--gir-gold) 82%, #000000);
+    border-color: color-mix(in srgb, var(--gir-gold) 82%, #000000);
+  }
+}
+
+.btn-gir-warm-gray {
+  background-color: var(--gir-warm-gray);
+  border-color: var(--gir-warm-gray);
+  color: #ffffff;
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--gir-warm-gray) 82%, #000000);
+    border-color: color-mix(in srgb, var(--gir-warm-gray) 82%, #000000);
+  }
+}
+
+// Card enhancements
+.card {
+  border: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.18s ease-in-out;
+  background-color: #ffffff;
+  color: #1a1c1e;
+
+  &:hover {
+    box-shadow: 0 0.75rem 1.35rem rgba(0, 0, 0, 0.14);
+  }
+}
+
+// Table enhancements
+.table {
+  font-size: 0.875rem;
+
+  thead tr {
+    background-color: #ffffff;
+  }
+
+  th {
+    font-weight: 600;
+    border-top: none;
+    padding: 1rem 0.75rem;
+    background-color: #ffffff;
+    color: #1a1c1e;
+  }
+
+  td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    background-color: #ffffff;
+    color: #1a1c1e;
+  }
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f5f7fb !important;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(209, 168, 84, 0.08) !important;
+  color: #1a1c1e !important;
+}
+
+// Form enhancements
+.form-control,
+.form-select {
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+  color: #1a1c1e;
+
+  &:focus {
+    border-color: var(--gir-gold);
+    box-shadow: 0 0 0 0.2rem rgba(209, 168, 84, 0.25);
+  }
+}
+
+.form-control::placeholder,
+.form-select::placeholder {
+  color: rgba(26, 28, 30, 0.5);
+}
+
+// Navbar enhancements
+.navbar {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+// Responsive utilities for 4K displays
+@media (min-width: 3840px) {
+  body {
+    font-size: 1.125rem;
+  }
+
+  .container,
+  .container-fluid {
+    max-width: 3200px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.75rem;
+  }
+  h5 {
+    font-size: 1.5rem;
+  }
+  h6 {
+    font-size: 1.25rem;
+  }
+}
+
+// Breakpoints críticos personalizados
+@media (max-width: 719px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .gir-silva-dashboard .app-sidebar-menu,
+  .app-sidebar-menu {
+    transform: translateX(-105%);
+    width: 260px !important;
+    box-shadow: none !important;
+  }
+
+  body.sidebar-enable .app-sidebar-menu {
+    transform: translateX(0);
+    width: 260px !important;
+    box-shadow: 2px 0 18px rgba(0, 0, 0, 0.35) !important;
+  }
+
+  body[data-sidebar='hidden'] .app-sidebar-menu,
+  body[data-leftbar-size='hidden'] .app-sidebar-menu {
+    transform: translateX(-105%);
+    width: 0 !important;
+  }
+
+  body[data-sidebar='default'] .app-sidebar-menu,
+  body[data-leftbar-size='default'] .app-sidebar-menu {
+    transform: translateX(0);
+    box-shadow: 2px 0 18px rgba(0, 0, 0, 0.35) !important;
+  }
+
+  body[data-sidebar='default'] .sidebar-overlay,
+  body[data-leftbar-size='default'] .sidebar-overlay,
+  body.sidebar-enable .sidebar-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .gir-silva-dashboard .content-page,
+  .content-page {
+    margin-left: 0 !important;
+    padding: 1.25rem 1rem !important;
+  }
+
+  .gir-silva-dashboard .topbar-custom,
+  .topbar-custom {
+    left: 0 !important;
+    padding: 0 1rem !important;
+  }
+}
+
+body[data-sidebar='hidden'] .app-sidebar-menu,
+body[data-leftbar-size='hidden'] .app-sidebar-menu {
+  transform: translateX(-110%);
+  width: 0 !important;
+  box-shadow: none !important;
+}
+
+body[data-sidebar='hidden'] .topbar-custom,
+body[data-leftbar-size='hidden'] .topbar-custom {
+  left: 0 !important;
+}
+
+body[data-sidebar='hidden'] .content-page,
+body[data-leftbar-size='hidden'] .content-page {
+  margin-left: 0 !important;
+}
+
+body[data-sidebar='condensed'] .app-sidebar-menu,
+body[data-leftbar-size='condensed'] .app-sidebar-menu {
+  width: var(--sidebar-collapsed-width) !important;
+  overflow: hidden;
+}
+
+body[data-sidebar='condensed'] .logo-box,
+body[data-leftbar-size='condensed'] .logo-box {
+  width: var(--sidebar-collapsed-width) !important;
+  padding: 1rem 0.5rem !important;
+}
+
+body[data-sidebar='condensed'] .logo-box .logo span.logo-lg,
+body[data-leftbar-size='condensed'] .logo-box .logo span.logo-lg {
+  display: none !important;
+}
+
+body[data-sidebar='condensed'] .logo-box .logo span.logo-sm,
+body[data-leftbar-size='condensed'] .logo-box .logo span.logo-sm {
+  display: block !important;
+}
+
+body[data-sidebar='condensed'] #sidebar-menu > ul > li > a,
+body[data-leftbar-size='condensed'] #sidebar-menu > ul > li > a {
+  padding: 14px 18px !important;
+  justify-content: center;
+}
+
+body[data-sidebar='condensed'] #sidebar-menu > ul > li > a i,
+body[data-leftbar-size='condensed'] #sidebar-menu > ul > li > a i {
+  margin-right: 0 !important;
+  font-size: 1.125rem !important;
+}
+
+body[data-sidebar='condensed'] #sidebar-menu > ul > li > a span,
+body[data-leftbar-size='condensed'] #sidebar-menu > ul > li > a span {
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  display: inline-block;
+  transition: opacity 0.18s ease;
+}
+
+body[data-sidebar='condensed'] .menu-title,
+body[data-leftbar-size='condensed'] .menu-title {
+  display: none !important;
+}
+
+body[data-sidebar='condensed'] .topbar-custom,
+body[data-leftbar-size='condensed'] .topbar-custom {
+  left: var(--sidebar-collapsed-width) !important;
+}
+
+body[data-sidebar='condensed'] .content-page,
+body[data-leftbar-size='condensed'] .content-page {
+  margin-left: var(--sidebar-collapsed-width) !important;
+}
+
+body[data-sidebar='condensed'] .app-sidebar-menu:hover,
+body[data-leftbar-size='condensed'] .app-sidebar-menu:hover {
+  width: var(--sidebar-width) !important;
+}
+
+body[data-sidebar='condensed'] .app-sidebar-menu:hover #sidebar-menu > ul > li > a span,
+body[data-leftbar-size='condensed'] .app-sidebar-menu:hover #sidebar-menu > ul > li > a span {
+  opacity: 1;
+  visibility: visible;
+  width: auto;
+}
+
+body[data-sidebar='condensed'] .app-sidebar-menu:hover ~ .topbar-custom,
+body[data-leftbar-size='condensed'] .app-sidebar-menu:hover ~ .topbar-custom {
+  left: var(--sidebar-width) !important;
+}
+
+body[data-sidebar='condensed'] .app-sidebar-menu:hover ~ .content-page,
+body[data-leftbar-size='condensed'] .app-sidebar-menu:hover ~ .content-page {
+  margin-left: var(--sidebar-width) !important;
+}
+
+@media (max-width: 479px) {
+  .gir-silva-dashboard .app-sidebar-menu,
+  .app-sidebar-menu {
+    width: 100% !important;
+  }
+
+  .gir-silva-dashboard .topbar-custom .page-title-main,
+  .topbar-custom .page-title-main {
+    font-size: 1rem !important;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1023px) {
+  .gir-silva-dashboard .content-page,
+  .content-page {
+    padding: 1.75rem !important;
+  }
+}
+
+@media (min-width: 3840px) {
+  .gir-silva-dashboard .content-page,
+  .content-page {
+    padding: 3rem 4rem !important;
+  }
+}
+
+// Print styles
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+// Silva Dashboard Topbar & Dropdown Styles (Enhanced with Tailwind)
+.gir-silva-dashboard .topbar-custom,
+.topbar-custom {
+  .user-panel {
+    &[aria-expanded='true'] {
+      .fas.fa-chevron-down {
+        transform: rotate(180deg) !important;
+      }
+    }
+  }
+
+  // Enhanced Dropdown Menu Styles with Tailwind
+  .dropdown-menu {
+    border: none !important;
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+    border-radius: 0.5rem !important;
+    padding: 0.5rem !important;
+    margin-top: 0.5rem !important;
+    min-width: 13rem !important;
+    animation: DropDownSlide 0.3s ease-in-out !important;
+    backdrop-filter: blur(10px) !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+
+    .dropdown-item {
+      border-radius: 0.375rem !important;
+      margin-bottom: 0.125rem !important;
+      transition: all 0.2s ease !important;
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      &:hover,
+      &:focus {
+        transform: translateY(-1px) !important;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+      }
+    }
+
+    .dropdown-divider {
+      margin: 0.5rem 0 !important;
+      opacity: 0.6 !important;
+    }
+  }
+}
+
+// Dropdown Animation
+@keyframes DropDownSlide {
+  0% {
+    opacity: 0;
+    margin-top: -10px;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    margin-top: 8px;
+    transform: translateY(0);
+  }
+}
+
+// Mobile Responsive for Topbar
+@media (max-width: 991.98px) {
+  .gir-silva-dashboard .topbar-custom,
+  .topbar-custom {
+    left: 0 !important;
+    padding: 0 1rem !important;
+
+    .user-panel .user-info {
+      display: none !important;
+    }
+
+    .user-panel .user-image {
+      margin-right: 0 !important;
+    }
+  }
+}

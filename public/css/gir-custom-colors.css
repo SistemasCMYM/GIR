@@ -1,0 +1,1015 @@
+/**
+ * GIR365 - Colores Personalizados
+ * Definición de colores custom para clases Tailwind
+ * SOLO para vistas de contenido, NO afecta sidebar ni navbar
+ */
+
+/* =================================================================
+   COLORES DE TEXTO - PRIMARY
+   ================================================================= */
+.tw-text-gir-primary-50 {
+  color: #eff6ff !important;
+}
+.tw-text-gir-primary-100 {
+  color: #dbeafe !important;
+}
+.tw-text-gir-primary-200 {
+  color: #bfdbfe !important;
+}
+.tw-text-gir-primary-300 {
+  color: #93c5fd !important;
+}
+.tw-text-gir-primary-400 {
+  color: #60a5fa !important;
+}
+.tw-text-gir-primary-500 {
+  color: #3b82f6 !important;
+}
+.tw-text-gir-primary-600 {
+  color: #2563eb !important;
+}
+.tw-text-gir-primary-700 {
+  color: #1d4ed8 !important;
+}
+.tw-text-gir-primary-800 {
+  color: #1e40af !important;
+}
+.tw-text-gir-primary-900 {
+  color: #1e3a8a !important;
+}
+
+/* =================================================================
+   COLORES DE FONDO - PRIMARY
+   ================================================================= */
+.tw-bg-gir-primary-50 {
+  background-color: #fefbf4 !important;
+}
+.tw-bg-gir-primary-100 {
+  background-color: #f7e0a5 !important;
+}
+.tw-bg-gir-primary-200 {
+  background-color: #f1d178 !important;
+}
+.tw-bg-gir-primary-300 {
+  background-color: #e8c14a !important;
+}
+.tw-bg-gir-primary-400 {
+  background-color: #e1b42d !important;
+}
+.tw-bg-gir-primary-500 {
+  background-color: #d1a854 !important;
+}
+.tw-bg-gir-primary-600 {
+  background-color: #c19148 !important;
+}
+.tw-bg-gir-primary-700 {
+  background-color: #a87d42 !important;
+}
+.tw-bg-gir-primary-800 {
+  background-color: #9b703c !important;
+}
+.tw-bg-gir-primary-900 {
+  background-color: #8f5e35 !important;
+}
+
+/* =================================================================
+   COLORES DE TEXTO - GOLD
+   ================================================================= */
+.tw-text-gir-gold-50 {
+  color: #fffbeb !important;
+}
+.tw-text-gir-gold-100 {
+  color: #fef3c7 !important;
+}
+.tw-text-gir-gold-200 {
+  color: #fde68a !important;
+}
+.tw-text-gir-gold-300 {
+  color: #fcd34d !important;
+}
+.tw-text-gir-gold-400 {
+  color: #fbbf24 !important;
+}
+.tw-text-gir-gold-500 {
+  color: #f59e0b !important;
+}
+.tw-text-gir-gold-600 {
+  color: #d97706 !important;
+}
+.tw-text-gir-gold-700 {
+  color: #b45309 !important;
+}
+.tw-text-gir-gold-800 {
+  color: #92400e !important;
+}
+.tw-text-gir-gold-900 {
+  color: #78350f !important;
+}
+
+/* =================================================================
+   COLORES DE FONDO - GOLD
+   ================================================================= */
+.tw-bg-gir-gold-50 {
+  background-color: #fffbeb !important;
+}
+.tw-bg-gir-gold-100 {
+  background-color: #fef3c7 !important;
+}
+.tw-bg-gir-gold-200 {
+  background-color: #fde68a !important;
+}
+.tw-bg-gir-gold-300 {
+  background-color: #fcd34d !important;
+}
+.tw-bg-gir-gold-400 {
+  background-color: #fbbf24 !important;
+}
+.tw-bg-gir-gold-500 {
+  background-color: #f59e0b !important;
+}
+.tw-bg-gir-gold-600 {
+  background-color: #d97706 !important;
+}
+.tw-bg-gir-gold-700 {
+  background-color: #b45309 !important;
+}
+.tw-bg-gir-gold-800 {
+  background-color: #92400e !important;
+}
+.tw-bg-gir-gold-900 {
+  background-color: #78350f !important;
+}
+
+/* =================================================================
+   COLORES DE TEXTO - WARM GRAY
+   ================================================================= */
+.tw-text-gir-warm-gray-50 {
+  color: #fafaf9 !important;
+}
+.tw-text-gir-warm-gray-100 {
+  color: #f5f5f4 !important;
+}
+.tw-text-gir-warm-gray-200 {
+  color: #e7e5e4 !important;
+}
+.tw-text-gir-warm-gray-300 {
+  color: #d6d3d1 !important;
+}
+.tw-text-gir-warm-gray-400 {
+  color: #a8a29e !important;
+}
+.tw-text-gir-warm-gray-500 {
+  color: #78716c !important;
+}
+.tw-text-gir-warm-gray-600 {
+  color: #57534e !important;
+}
+.tw-text-gir-warm-gray-700 {
+  color: #44403c !important;
+}
+.tw-text-gir-warm-gray-800 {
+  color: #292524 !important;
+}
+.tw-text-gir-warm-gray-900 {
+  color: #1c1917 !important;
+}
+
+/* =================================================================
+   COLORES DE FONDO - WARM GRAY
+   ================================================================= */
+.tw-bg-gir-warm-gray-50 {
+  background-color: #fafaf9 !important;
+}
+.tw-bg-gir-warm-gray-100 {
+  background-color: #f5f5f4 !important;
+}
+.tw-bg-gir-warm-gray-200 {
+  background-color: #e7e5e4 !important;
+}
+.tw-bg-gir-warm-gray-300 {
+  background-color: #d6d3d1 !important;
+}
+.tw-bg-gir-warm-gray-400 {
+  background-color: #a8a29e !important;
+}
+.tw-bg-gir-warm-gray-500 {
+  background-color: #78716c !important;
+}
+.tw-bg-gir-warm-gray-600 {
+  background-color: #57534e !important;
+}
+.tw-bg-gir-warm-gray-700 {
+  background-color: #44403c !important;
+}
+.tw-bg-gir-warm-gray-800 {
+  background-color: #292524 !important;
+}
+.tw-bg-gir-warm-gray-900 {
+  background-color: #1c1917 !important;
+}
+
+/* =================================================================
+   COLORES DE BORDE
+   ================================================================= */
+.tw-border-gir-primary-500 {
+  border-color: #3b82f6 !important;
+}
+.tw-border-gir-primary-600 {
+  border-color: #2563eb !important;
+}
+.tw-border-gir-gold-500 {
+  border-color: #f59e0b !important;
+}
+.tw-border-gir-gold-600 {
+  border-color: #d97706 !important;
+}
+.tw-border-gir-warm-gray-100 {
+  border-color: #f5f5f4 !important;
+}
+.tw-border-gir-warm-gray-200 {
+  border-color: #e7e5e4 !important;
+}
+.tw-border-gir-warm-gray-300 {
+  border-color: #d6d3d1 !important;
+}
+
+/* =================================================================
+   HOVER STATES
+   ================================================================= */
+.hover\:tw-text-gir-primary-600:hover {
+  color: #2563eb !important;
+}
+.hover\:tw-text-gir-primary-700:hover {
+  color: #1d4ed8 !important;
+}
+.hover\:tw-text-gir-primary-800:hover {
+  color: #1e40af !important;
+}
+.hover\:tw-bg-gir-primary-50:hover {
+  background-color: #eff6ff !important;
+}
+.hover\:tw-bg-gir-primary-100:hover {
+  background-color: #dbeafe !important;
+}
+.hover\:tw-text-gir-gold-600:hover {
+  color: #d97706 !important;
+}
+.hover\:tw-text-gir-gold-700:hover {
+  color: #b45309 !important;
+}
+
+/* =================================================================
+   GROUP HOVER STATES
+   ================================================================= */
+.group:hover .group-hover\:tw-text-gir-primary-600 {
+  color: #2563eb !important;
+}
+.group:hover .group-hover\:tw-text-gir-primary-700 {
+  color: #1d4ed8 !important;
+}
+.group:hover .group-hover\:tw-bg-gir-primary-50 {
+  background-color: #eff6ff !important;
+}
+.group:hover .group-hover\:tw-from-gir-primary-50\/50 {
+  background-color: rgba(239, 246, 255, 0.5) !important;
+}
+.group:hover .group-hover\:tw-to-gir-primary-100\/50 {
+  background-color: rgba(219, 234, 254, 0.5) !important;
+}
+
+/* =================================================================
+   ESTILOS ESPECÍFICOS PARA VISTA DE EMPLEADOS
+   Solo aplica dentro del contenedor .gir-override
+   NO afecta sidebar, navbar ni otras vistas
+   ================================================================= */
+
+/* Asegurar texto negro visible en todo el contenido */
+.gir-override {
+  color: #000 !important;
+}
+
+.gir-override p,
+.gir-override span:not(.tw-text-gir-primary-600):not(.tw-text-gir-warm-gray-400),
+.gir-override div,
+.gir-override td,
+.gir-override th,
+.gir-override li,
+.gir-override label {
+  color: #000 !important;
+}
+
+/* Inputs y formularios con texto visible */
+.gir-override input,
+.gir-override textarea,
+.gir-override select {
+  color: #000 !important;
+  background-color: #fff !important;
+  border: 1px solid #ced4da !important;
+}
+
+.gir-override input::placeholder,
+.gir-override textarea::placeholder {
+  color: #6c757d !important;
+}
+
+/* Botones con texto visible */
+.gir-override button:not(.btn-close) {
+  color: inherit;
+}
+
+.gir-override .btn-primary {
+  color: #fff !important;
+}
+
+.gir-override .btn-secondary {
+  color: #fff !important;
+}
+
+.gir-override .btn-success {
+  color: #fff !important;
+}
+
+.gir-override .btn-danger {
+  color: #fff !important;
+}
+
+.gir-override .btn-warning {
+  color: #000 !important;
+}
+
+.gir-override .btn-info {
+  color: #000 !important;
+}
+
+.gir-override .btn-light {
+  color: #000 !important;
+}
+
+.gir-override .btn-dark {
+  color: #fff !important;
+}
+
+/* Links dentro del contenido */
+.gir-override a:not(.tw-text-gir-primary-600) {
+  color: #2563eb !important;
+  text-decoration: none;
+}
+
+.gir-override a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos de tabla responsiva y moderna */
+.gir-override .table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+}
+
+.gir-override table {
+  color: #000 !important;
+  font-size: 0.875rem;
+  margin-bottom: 0;
+}
+
+.gir-override table thead {
+  background-color: #f8f9fa !important;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.gir-override table thead th {
+  color: #000 !important;
+  font-weight: 600 !important;
+  font-size: 0.75rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 12px 8px !important;
+  white-space: nowrap;
+}
+
+.gir-override table tbody td {
+  color: #000 !important;
+  font-size: 0.8125rem;
+  padding: 10px 8px !important;
+  vertical-align: middle;
+}
+
+.gir-override table tbody tr:hover {
+  background-color: #f8f9fa !important;
+}
+
+/* Badges con buen contraste */
+.gir-override .badge {
+  font-weight: 500;
+  padding: 0.35em 0.65em;
+  font-size: 0.75rem;
+}
+
+.gir-override .badge.bg-primary {
+  background-color: #0d6efd !important;
+  color: #fff !important;
+}
+
+.gir-override .badge.bg-secondary {
+  background-color: #6c757d !important;
+  color: #fff !important;
+}
+
+.gir-override .badge.bg-success {
+  background-color: #198754 !important;
+  color: #fff !important;
+}
+
+.gir-override .badge.bg-danger {
+  background-color: #dc3545 !important;
+  color: #fff !important;
+}
+
+.gir-override .badge.bg-warning {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+}
+
+.gir-override .badge.bg-info {
+  background-color: #0dcaf0 !important;
+  color: #000 !important;
+}
+
+.gir-override .badge.bg-light {
+  background-color: #f8f9fa !important;
+  color: #000 !important;
+  border: 1px solid #dee2e6;
+}
+
+.gir-override .badge.bg-dark {
+  background-color: #212529 !important;
+  color: #fff !important;
+}
+
+/* Card styles modernos */
+.gir-override .card {
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.gir-override .card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  padding: 1rem 1.25rem;
+}
+
+.gir-override .card-header h5,
+.gir-override .card-header h4 {
+  color: #000 !important;
+  font-weight: 600;
+  margin: 0;
+}
+
+.gir-override .card-body {
+  padding: 1.25rem;
+  background-color: #fff;
+}
+
+/* Alertas con texto visible */
+.gir-override .alert {
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.gir-override .alert-success {
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+  color: #0f5132 !important;
+}
+
+.gir-override .alert-success h4,
+.gir-override .alert-success p,
+.gir-override .alert-success span {
+  color: #0f5132 !important;
+}
+
+.gir-override .alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+  color: #842029 !important;
+}
+
+.gir-override .alert-danger h4,
+.gir-override .alert-danger p,
+.gir-override .alert-danger span {
+  color: #842029 !important;
+}
+
+.gir-override .alert-warning {
+  background-color: #fff3cd;
+  border-color: #ffecb5;
+  color: #664d03 !important;
+}
+
+.gir-override .alert-warning h4,
+.gir-override .alert-warning p,
+.gir-override .alert-warning span {
+  color: #664d03 !important;
+}
+
+.gir-override .alert-info {
+  background-color: #cff4fc;
+  border-color: #b6effb;
+  color: #055160 !important;
+}
+
+.gir-override .alert-info h4,
+.gir-override .alert-info p,
+.gir-override .alert-info span {
+  color: #055160 !important;
+}
+
+/* Modal con texto visible */
+.gir-override .modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  padding: 0.75rem 1rem;
+}
+
+.gir-override .modal-title {
+  color: #000 !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.gir-override .modal-body {
+  color: #000 !important;
+  padding: 1rem;
+}
+
+.gir-override .modal-body p,
+.gir-override .modal-body span,
+.gir-override .modal-body div,
+.gir-override .modal-body label {
+  color: #000 !important;
+}
+
+/* Formularios compactos en modales */
+.gir-override .modal-body .form-label,
+.gir-override .modal-body label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: #000 !important;
+}
+
+.gir-override .modal-body .form-control,
+.gir-override .modal-body .form-select {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  height: calc(1.5em + 0.75rem + 2px);
+}
+
+.gir-override .modal-body .form-control:focus,
+.gir-override .modal-body .form-select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+}
+
+/* Grid compacto para formularios */
+.gir-override .modal-body .tw-grid {
+  gap: 0.75rem;
+}
+
+.gir-override .modal-body .tw-gap-4 {
+  gap: 0.75rem !important;
+}
+
+/* Footer del modal compacto */
+.gir-override .modal-footer {
+  padding: 0.75rem 1rem;
+  background-color: #f8f9fa;
+}
+
+/* Alertas en modales */
+.gir-override .modal-body .alert {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.gir-override .modal-body .tw-bg-blue-50,
+.gir-override .modal-body .tw-bg-green-50,
+.gir-override .modal-body .tw-bg-yellow-50 {
+  color: #000 !important;
+}
+
+.gir-override .modal-body .tw-bg-blue-50 * {
+  color: #084298 !important;
+}
+
+.gir-override .modal-body .tw-bg-green-50 * {
+  color: #0f5132 !important;
+}
+
+.gir-override .modal-body .tw-bg-yellow-50 * {
+  color: #664d03 !important;
+}
+
+/* Hacer visible el texto con clases Tailwind personalizadas */
+.gir-override .tw-text-gir-warm-gray-700,
+.gir-override .tw-text-gir-warm-gray-800,
+.gir-override .tw-text-gir-warm-gray-900 {
+  color: #000 !important;
+}
+
+.gir-override .tw-text-gir-warm-gray-500,
+.gir-override .tw-text-gir-warm-gray-600 {
+  color: #333 !important;
+}
+
+.gir-override .tw-text-gir-warm-gray-400 {
+  color: #6c757d !important;
+}
+
+/* CRÍTICO: Forzar texto negro en labels de formularios */
+.gir-override label,
+.gir-override .form-label,
+.gir-override label.tw-block,
+.gir-override label span,
+.gir-override label.tw-text-sm {
+  color: #000 !important;
+}
+
+/* Forzar texto negro en todos los elementos del modal */
+.gir-override .modal-content,
+.gir-override .modal-content * {
+  color: #000 !important;
+}
+
+/* Excepciones: mantener colores específicos */
+.gir-override .modal-header.tw-bg-gradient-to-r,
+.gir-override .modal-header.tw-bg-gradient-to-r *,
+.gir-override .modal-footer .tw-bg-gradient-to-r,
+.gir-override .modal-footer .tw-bg-gradient-to-r * {
+  color: #fff !important;
+}
+
+.gir-override .tw-text-red-500,
+.gir-override .text-danger {
+  color: #dc3545 !important;
+}
+
+.gir-override .badge {
+  color: inherit !important;
+}
+
+.gir-override .btn {
+  color: inherit !important;
+}
+
+.gir-override .btn-primary,
+.gir-override .btn.tw-bg-gradient-to-r {
+  color: #fff !important;
+}
+
+/* Títulos y headers en modales con gradientes */
+.gir-override .modal-header.tw-bg-gradient-to-r,
+.gir-override .modal-header .modal-title {
+  color: #fff !important;
+}
+
+.gir-override .modal-header.tw-bg-gradient-to-r .modal-title {
+  color: #fff !important;
+}
+
+.gir-override .modal-header.tw-bg-gradient-to-r h5 {
+  color: #fff !important;
+}
+
+.gir-override .modal-header .btn-close-white {
+  filter: brightness(0) invert(1);
+}
+
+/* Reducir padding en secciones del formulario */
+.gir-override .modal-body .tw-p-6 {
+  padding: 1rem !important;
+}
+
+.gir-override .modal-body .tw-p-4 {
+  padding: 0.75rem !important;
+}
+
+.gir-override .modal-body .tw-mb-6 {
+  margin-bottom: 1rem !important;
+}
+
+/* Hacer los campos de texto más compactos */
+.gir-override .modal-body .tw-mb-2 {
+  margin-bottom: 0.25rem !important;
+}
+
+.gir-override .modal-body .tw-rounded-lg {
+  border-radius: 0.375rem;
+}
+
+/* Iconos Font Awesome con buen contraste */
+.gir-override .fa,
+.gir-override .fas,
+.gir-override .far,
+.gir-override .fal,
+.gir-override .fab {
+  color: inherit;
+}
+
+/* Asegurar que DataTables tenga buen contraste */
+.gir-override .dataTables_wrapper {
+  color: #000 !important;
+}
+
+.gir-override .dataTables_wrapper .dataTables_filter label,
+.gir-override .dataTables_wrapper .dataTables_length label,
+.gir-override .dataTables_wrapper .dataTables_info,
+.gir-override .dataTables_wrapper .dataTables_paginate {
+  color: #000 !important;
+}
+
+.gir-override .dataTables_wrapper select,
+.gir-override .dataTables_wrapper input {
+  color: #000 !important;
+  background-color: #fff !important;
+  border: 1px solid #ced4da !important;
+}
+
+/* =================================================================
+   ESTILOS ADICIONALES PARA FORMULARIOS COMPACTOS
+   ================================================================= */
+
+/* Inputs de texto compactos */
+.gir-override input[type='text'],
+.gir-override input[type='email'],
+.gir-override input[type='number'],
+.gir-override input[type='tel'],
+.gir-override input[type='password'],
+.gir-override textarea,
+.gir-override select {
+  font-size: 0.875rem !important;
+  padding: 0.375rem 0.75rem !important;
+  line-height: 1.5;
+  color: #000 !important;
+  background-color: #fff !important;
+  border: 1px solid #ced4da !important;
+  border-radius: 0.375rem;
+}
+
+/* Placeholders visibles */
+.gir-override input::placeholder,
+.gir-override textarea::placeholder {
+  color: #6c757d !important;
+  opacity: 0.7;
+}
+
+/* Labels más pequeños y compactos */
+.gir-override label,
+.gir-override .form-label {
+  font-size: 0.8125rem !important;
+  font-weight: 500 !important;
+  margin-bottom: 0.25rem !important;
+  color: #000 !important;
+  display: block;
+}
+
+/* Asteriscos rojos para campos requeridos */
+.gir-override .tw-text-red-500 {
+  color: #dc3545 !important;
+}
+
+/* Grupos de formulario compactos */
+.gir-override .form-group,
+.gir-override .mb-3 {
+  margin-bottom: 0.75rem !important;
+}
+
+/* Selects con mejor apariencia */
+.gir-override select option {
+  color: #000 !important;
+  background-color: #fff !important;
+}
+
+/* Checkboxes y radios */
+.gir-override .form-check-input {
+  margin-top: 0.25rem;
+}
+
+.gir-override .form-check-label {
+  font-size: 0.875rem;
+  color: #000 !important;
+}
+
+/* Botones en formularios */
+.gir-override .modal-footer .btn {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Espaciado reducido en grids */
+.gir-override .tw-gap-6 {
+  gap: 0.75rem !important;
+}
+
+/* Texto de ayuda y descripciones */
+.gir-override .form-text,
+.gir-override .text-muted,
+.gir-override small {
+  font-size: 0.8125rem;
+  color: #6c757d !important;
+}
+
+/* Íconos en formularios */
+.gir-override .input-group-text {
+  color: #000 !important;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+}
+
+/* Scroll en modales compacto */
+.gir-override .modal-body {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+/* Barras de scroll estilizadas */
+.gir-override .modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.gir-override .modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.gir-override .modal-body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.gir-override .modal-body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* =================================================================
+   ESTILOS PARA BOOTSTRAP PURO EN MODALES
+   ================================================================= */
+
+/* Form controls pequeños y compactos */
+.gir-override .form-control-sm,
+.gir-override .form-select-sm {
+  padding: 0.25rem 0.5rem !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  height: auto;
+  min-height: 31px;
+}
+
+/* Labels Bootstrap */
+.gir-override .form-label {
+  margin-bottom: 0.25rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  color: #000 !important;
+}
+
+/* Grid de Bootstrap compacto */
+.gir-override .row.g-3 {
+  --bs-gutter-x: 0.75rem;
+  --bs-gutter-y: 0.75rem;
+}
+
+/* Alertas de Bootstrap con texto visible */
+.gir-override .alert {
+  color: inherit !important;
+}
+
+.gir-override .alert-info {
+  background-color: #cff4fc;
+  border-color: #9eeaf9;
+  color: #055160 !important;
+}
+
+.gir-override .alert-info * {
+  color: #055160 !important;
+}
+
+/* Cards de Bootstrap */
+.gir-override .card.bg-light {
+  background-color: #f8f9fa !important;
+  color: #000 !important;
+}
+
+.gir-override .card.bg-light * {
+  color: #000 !important;
+}
+
+/* Code blocks */
+.gir-override code {
+  color: #000 !important;
+  background-color: #f8f9fa;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+}
+
+/* Botones de Bootstrap en modales */
+.gir-override .modal-header.bg-primary {
+  background-color: #0d6efd !important;
+  color: #fff !important;
+}
+
+.gir-override .modal-header.bg-primary * {
+  color: #fff !important;
+}
+
+.gir-override .modal-header.bg-info {
+  background-color: #0dcaf0 !important;
+  color: #000 !important;
+}
+
+.gir-override .modal-header.bg-info * {
+  color: #000 !important;
+}
+
+.gir-override .btn-primary {
+  background-color: #d1a854 !important;
+  border-color: #d1a854 !important;
+  color: #fff !important;
+}
+
+.gir-override .btn-secondary {
+  background-color: #6c757d !important;
+  border-color: #6c757d !important;
+  color: #fff !important;
+}
+
+.gir-override .btn-info {
+  background-color: #0dcaf0 !important;
+  border-color: #0dcaf0 !important;
+  color: #000 !important;
+}
+
+/* Text utilities */
+.gir-override .text-muted {
+  color: #6c757d !important;
+}
+
+.gir-override .text-danger {
+  color: #dc3545 !important;
+}
+
+.gir-override .fw-bold {
+  font-weight: 700 !important;
+}
+
+.gir-override .small {
+  font-size: 0.875rem !important;
+}
+
+/* =================================================================
+   BOTÓN PERSONALIZADO GIR-GOLD
+   ================================================================= */
+
+/* Botón dorado personalizado para "Ver Detalles" */
+.btn-gir-gold {
+  background-color: #d1a854 !important;
+  border-color: #d1a854 !important;
+  color: #fff !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-gir-gold:hover {
+  background-color: #c19148 !important;
+  border-color: #c19148 !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(209, 168, 84, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-gir-gold:active {
+  background-color: #a87d42 !important;
+  border-color: #a87d42 !important;
+  color: #fff !important;
+  transform: translateY(0);
+}
+
+.btn-gir-gold:focus {
+  background-color: #c19148 !important;
+  border-color: #c19148 !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 0.2rem rgba(209, 168, 84, 0.5);
+}
+
+/* Variación del botón cuando está deshabilitado */
+.btn-gir-gold:disabled,
+.btn-gir-gold.disabled {
+  background-color: #e8c14a !important;
+  border-color: #e8c14a !important;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
